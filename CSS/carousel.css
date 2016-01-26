@@ -26,12 +26,21 @@ body {
     padding-left: 0;
 }
 .navbar-wrapper .navbar {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.navbar-wrapper .brand > img{
+    max-height: 50px;
+    overflow: visible;
+    padding-right: 10px;
+    padding-left: 0;
+    padding-top: 2px;
 }
 .navbar-wrapper .navbar .container {
     width: auto;
 }
+
 
 
 /* CUSTOMIZE THE CAROUSEL
@@ -53,10 +62,9 @@ body {
     background-color: #777;
 }
 .carousel-inner > .item > img {
-    position: absolute;
     top: 0;
     left: 0;
-    min-width: 100%;
+    min-width: 10%;
     height: 500px;
 }
 
