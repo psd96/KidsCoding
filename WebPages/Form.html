@@ -13,36 +13,50 @@
     <!-- Angular JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <!-- Link to an external CSS file -->
-    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <link href="../CSS/main.css" rel="stylesheet">
 
 </head>
 
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">University of Reading</a>
-        </div>
-        <div>
-            <div class="collapse navbar-collapse" id="myNavbar">
+<div class="navbar-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="nav navbar-nav brand navbar-left"><img src="../Images/Icon/logo-icon-full-colour.png"></a>
+                    <a class="navbar-brand" href="#">KidsCoding</a>
+                </div>
                 <ul class="nav navbar-nav">
-                    <li><a href="#labs">Labs </a></li>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Downloads <span class="caret"></span></a>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="about us">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#logos">Logos</a></li>
-                            <li><a href="#lectures">Lectures</a></li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
                         </ul>
-                    </li>
+                    <li><a href="#donations">Donations</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
-        </div>
+        </nav>
     </div>
-</nav>
+</div>
 
 <div class="container">
     <h1 class="well">Registration Form</h1>
@@ -96,7 +110,7 @@
                         <label>Why you want to volunteer for us...</label>
                         <input type="text" placeholder="Enter why you want to volunteer for us.." class="form-control">
                     </div>
-                    <button type="button" class="btn btn-lg btn-info">Submit</button>
+                    <a href="http://localhost:63342/KidsCoding/WebPages/PostForm.html" class="btn btn-lg btn-info">Submit Form</a>
                 </div>
             </form>
         </div>
