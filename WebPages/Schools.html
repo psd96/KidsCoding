@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 
-    <title>Contact Us</title>
+    <title>Carousel Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link href="../CSS/base.css" rel="stylesheet">
+    <link href="../CSS/schools.css" rel="stylesheet">
 
 
 </head>
@@ -43,25 +43,24 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="HomePage.html" class="nav navbar-nav brand navbar-left"><img src="../Images/Icon/logo-icon-full-colour.png"></a>
-                    <a class="navbar-brand" href="HomePage.html">KidsCoding</a>
+                    <a href="#" class="nav navbar-nav brand navbar-left"><img src="../Images/Icon/logo-icon-full-colour.png"></a>
+                    <a class="navbar-brand" href="#">KidsCoding</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class="home"><a href="HomePage.html">Home</a></li>
+                    <li class="active"><a href="#">Home</a></li>
                     <li class="about us">
-                        <a href="AboutUs.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="AboutUs.html#c1">Action</a></li>
-                            <li><a href="AboutUs.html#c2">Another action</a></li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
                             <li><a href="#">Something else here</a></li>
                             <li role="separator" class="divider"></li>
                             <li class="dropdown-header">Nav header</li>
                             <li><a href="#">Separated link</a></li>
                             <li><a href="#">One more separated link</a></li>
                         </ul>
-                    </li>
-                    <li><a href="Donations.html">Donations</a></li>
-                    <li class="active"><a href="ContactUs.html">Contact</a></li>
+                    <li><a href="#donations">Donations</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -72,22 +71,32 @@
     </div>
 </div>
 <!----HERE IS WHERE PAGE CONTENT GOES------>
-<center><H1><b>Contact Us</b></H1></center>
-<div class="three columns morepanel">
-    <div class="wrap">
-        <p><img alt="Email" height="200" src="/system/files/032013/514b0dd29d200f193c00006d/original/email.png?1363970126" width="199" /></p>
-        <h4 id="volunteer-support">Volunteer support</h4>
 
-        <p>If you have questions related to volunteering with us or hosting a club at your venue, drop us a line and we&#39;ll sort it out.</p>
 
-        <p><a href="mailto:support@codeclub.org.uk" class="button round primary">Email support</a></p>
-
+<!--main title under the navBar--->
+<center><H1><b>Schools</b></H1></center>
+<!--Creating the container for the google map--->
+<div class="container">
+    <p class="lead" align="middle">Join us in one of the biggest project we have ever tackled.</p>
+</div>
+<div class="container">
+    <!--Creating the iFrame for the google map--->
+    <div align="middle">
+    <iframe width="100%" height="400"  frameborder="3" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5269295.771129417!2d-4.418150707395155!3d54.46603410196369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2s!4v1454421633296" align="middle"></iframe><br />
     </div>
+
 </div>
 
 <!----HERE IS WHERE PAGE CONTENT GOES------>
 
 <!-- FOOTER -->
+<!-- Spaces to devide the footer from the page contents -->
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <footer>
     <p class="pull-right"><a href="#">Back to top</a></p>
     <p>&copy; 2015 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
@@ -95,6 +104,7 @@
 </div><!-- /.container -->
 
 <!-- Placed at the end of the document so the pages load faster -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="../bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
