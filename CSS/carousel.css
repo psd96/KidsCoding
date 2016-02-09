@@ -5,6 +5,7 @@
 body {
     padding-bottom: 40px;
     color: #5a5a5a;
+
 }
 
 
@@ -36,6 +37,7 @@ body {
     padding-right: 10px;
     padding-left: 0;
     padding-top: 2px;
+
 }
 .navbar-wrapper .navbar .container {
     width: auto;
@@ -59,7 +61,7 @@ body {
 /* Declare heights because of positioning of img element */
 .carousel .item {
     height: 500px;
-    background-color: #777;
+    background-color: #1b6d85;
 }
 .carousel-inner > .item > img {
     top: 0;
@@ -108,6 +110,7 @@ body {
     /* Navbar positioning foo */
     .navbar-wrapper {
         margin-top: 20px;
+
     }
     .navbar-wrapper .container {
         padding-right: 15px;
