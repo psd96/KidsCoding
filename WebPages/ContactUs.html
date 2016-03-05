@@ -25,7 +25,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link href="../CSS/contactUs.css" rel="stylesheet">
+    <link href="../CSS/base.css" rel="stylesheet">
 
 
 </head>
@@ -73,30 +73,54 @@
 </div>
 <!----HERE IS WHERE PAGE CONTENT GOES------>
 <center><H1><b>Contact Us</b></H1></center>
-
-
-
 <div id="c1" class="container">
     <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">Having a hard time coding? Email Us!</span></h2>
-            <p class="lead">We will answer in less than 5 working days.</p>
+        <div class="col-md-4">
+            <h2 class="featurette-heading"><center>Location</center></span></h2>
+            <p class="lead">University of Reading <br>
+                Whiteknights <br>
+                PO Box 217 <br>
+                Reading <br>
+                Berkshire <br>
+                RG6 6AH <br>
+        </div>
+        <div class="col-md-6">
+            <br>
+            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:240px;width:750px;'><div id='gmap_canvas' style='height:240px;width:750px;'></div><div><small><a href="http://embedgooglemaps.com">									embed google map							</a></small></div><div><small><a href="http://freedirectorysubmissionsites.com">directory submission sites</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(51.4576163,-0.9456215999999813),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(51.4576163,-0.9456215999999813)});infowindow = new google.maps.InfoWindow({content:'<strong>University of Reading</strong><br>rg6 6ah<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script></div>
+    </div>
+    <br>
+    <h2 class="featurette-heading"><center>More information</center></span></h2>
 
-        </div>
-        <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block img-circle" src="../Images/contactUs/contactUs.png" alt="Generic placeholder image">
-        </div>
+    <div class="col-md-6">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="name">Name:</label>
+                <div class="col-sm-10">
+                    <input type="name" class="form-control" id="name" placeholder="Enter Name">
+                </div>
+
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <br>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                </div>
+
+                <label class="control-label col-sm-2" for="msg">Message:</label>
+                <div class="col-sm-10">
+                    <input type="msg" class="form-control" id="msg" placeholder="Message ">
+                </div>
+                <br>
+                <a href="http://localhost:63342/KidsCoding/WebPages/PostForm.html" class="btn btn-lg btn-info">Submit</a>
+
+
+            </div>
+
+
+
     </div>
 </div>
 
-
-
 <!----HERE IS WHERE PAGE CONTENT GOES------>
-
-
-<div class="separator"></div>
-
-
 
 <!-- FOOTER -->
 <div class="container marketing">
