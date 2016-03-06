@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>Schools</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -75,16 +75,90 @@
 
 <!--main title under the navBar--->
 <center><H1><b>Schools</b></H1></center>
-<!--Creating the container for the google map--->
-<div class="container">
-    <p class="lead" align="middle">Join us in one of the biggest project we have ever tackled.</p>
+<div class="col-md-6">
+    <h2 class="featurette-heading"><left>About the Schools</left></span></h2>
+    <p class="lead"><br><br>
+        Kids coding is one of the leading innovators in teaching children coding. <br><br>
+        Teaching is done in Schools local to Volunteers that have signed up to the program. <br><br>
+        Schools are vital to the program to provide resources such as computers, desks and chairs to students <br>
+        whilst also providing a comfortable enviroment to learn and excel in.<br><br>
+        To the right shows all of the schools already on the scheme, with many more to follow suit soon. <br><br>Each red pin
+        is a location that can be selected for the name and address of the School    <br><br>
+    </p>
 </div>
-<div class="container">
-    <!--Creating the iFrame for the google map--->
-    <div align="middle">
-    <iframe width="100%" height="400"  frameborder="3" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5269295.771129417!2d-4.418150707395155!3d54.46603410196369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2s!4v1454421633296" align="middle"></iframe><br />
-    </div>
+<!--Creating the container for the google map--->
+<!--Creating the iFrame for the google map--->
+<div align="left">
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+        var markers = [
+            {
+                "title": 'Aksa Beach',
+                "lat": '19.1759668',
+                "lng": '72.79504659999998',
+                "description": 'Aksa Beach is a popular beach and a vacation spot in Aksa village at Malad, Mumbai.'
+            },
+            {
+                "title": 'Juhu Beach',
+                "lat": '19.0883595',
+                "lng": '72.82652380000002',
+                "description": 'Juhu Beach is one of favourite tourist attractions situated in Mumbai.'
+            },
+            {
+                "title": 'Girgaum Beach',
+                "lat": '18.9542149',
+                "lng": '72.81203529999993',
+                "description": 'Girgaum Beach commonly known as just Chaupati is one of the most famous public beaches in Mumbai.'
+            },
+            {
+                "title": 'Jijamata Udyan',
+                "lat": '18.979006',
+                "lng": '72.83388300000001',
+                "description": 'Jijamata Udyan is situated near Byculla station is famous as Mumbai (Bombay) Zoo.'
+            },
+            {
+                "title": 'Sanjay Gandhi National Park',
+                "lat": '19.2147067',
+                "lng": '72.91062020000004',
+                "description": 'Sanjay Gandhi National Park is a large protected area in the northern part of Mumbai city.'
+            }
+        ];
+        window.onload = function () {
+            LoadMap();
+        }
+        function LoadMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(markers[0].lat, markers[0].lng),
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
 
+            //Create and open InfoWindow.
+            var infoWindow = new google.maps.InfoWindow();
+
+            for (var i = 0; i < markers.length; i++) {
+                var data = markers[i];
+                var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: data.title
+                });
+
+                //Attach click event to the marker.
+                (function (marker, data) {
+                    google.maps.event.addListener(marker, "click", function (e) {
+                        //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                        infoWindow.setContent("<div style = 'width:200px;min-height:40px'>" + data.description + "</div>");
+                        infoWindow.open(map, marker);
+                    });
+                })(marker, data);
+            }
+        }
+    </script>
+    <div id="dvMap" style="width: 600px; height: 600px">
+    </div>
 </div>
 
 <!----HERE IS WHERE PAGE CONTENT GOES------>
