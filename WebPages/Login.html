@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 
-    <title>Base for all WebPages</title>
+    <title>Login KidsCoding</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -52,21 +52,30 @@
                     <li class="about us">
                         <a href="AboutUs.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="AboutUs.html#c1">Action</a></li>
-                            <li><a href="AboutUs.html#c2">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
+                            <li><a href="AboutUs.html#c1">About us Top</a></li>
+                            <li><a href="AboutUs.html#c2">About us Bottom</a></li>
+                            <li><a href="ContactUs.html">Contact Us</a></li>
                         </ul>
                     </li>
-                    <li><a href="Donations.html">Donations</a></li>
-                    <li><a href="ContactUs.html">Contact</a></li>
+                    <li class="parentSchools">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parents and Students <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="AboutUs.html#c1">Parent Information</a></li>
+                            <li><a href="AboutUs.html#c2">Student Information</a></li>
+                        </ul>
+                    </li>
+                    <li class="join us">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Join us <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="SignUp.html">Sign up</a></li>
+                            <li><a href="Donations.html">Donate</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Schools.html">Schools</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="SignUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
         </nav>
@@ -76,18 +85,21 @@
 <div class="container">
 
     <form class="form-signin">
-        <a href="#" class=""><img src="../Images/Icon/logo-icon-full-colour.png"></a>
+
+        <img src="../Images/Icon/logo-icon-full-colour.png" align="centre">
+
         <h2 class="form-signin-heading">Please sign in</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
-        </div>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
         <a href="http://localhost:63342/KidsCoding/WebPages/PostForm.html" class="btn btn-lg btn-info">Login</a>
+
+        </div>
     </form>
 
 </div> <!-- /container -->
