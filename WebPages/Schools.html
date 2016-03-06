@@ -79,102 +79,108 @@
                 </ul>
             </div>
         </nav>
-    </div> 
+    </div>
 </div>
 <!----HERE IS WHERE PAGE CONTENT GOES------>
 
 
 <!--main title under the navBar--->
 <center><H1><b>Schools</b></H1></center>
-<div class="col-md-6">
-    <h2 class="featurette-heading"><center><b>About  the Schools</b></center></span></h2>
-    <p class="lead"><br>
-        Kids coding is one of the leading innovators in teaching children coding. <br><br>
-        Teaching is done in Schools local to Volunteers that have signed up to the program. <br><br>
-        Schools are vital to the program to provide resources such as computers, desks and chairs to students
-        whilst also providing a comfortable enviroment to learn and excel in.<br><br>
-        Not only will the classes help the students, but also the teachers to create better lessons where students can literally
-        make their ideas turn into a reality with the touch of a button. <br><br>
-        To the right shows all of the schools already on the scheme, with many more to follow suit soon. Each red pin
-        is a location that can be selected for the name and address of the School    <br><br>
-    <div class="col-md-5">
-        <img class="featurette-image img-responsive center-block img-circle" src="../Images/aboutUs/codestarter.jpg" alt="Generic placeholder image">
-    <p style="font-size:160%;">Young student learning code</p>
-</div>
-    <div class="col-md-5">
-        <img class="featurette-image img-responsive center-block img-circle" src="../Images/aboutUs/learningcode.jpg" alt="Generic placeholder image">
-        <p style="font-size:160%;">Girls learning code</p>
-    </div>
+<div class = "contents">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <h2 class="featurette-heading"><center><b>About  the Schools</b></center></span></h2>
+            <p class="lead"><br>
+                Kids coding is one of the leading innovators in teaching children coding. <br><br>
+                Teaching is done in Schools local to Volunteers that have signed up to the program. <br><br>
+                Schools are vital to the program to provide resources such as computers, desks and chairs to students
+                whilst also providing a comfortable enviroment to learn and excel in.<br><br>
+                Not only will the classes help the students, but also the teachers to create better lessons where students can literally
+                make their ideas turn into a reality with the touch of a button. <br><br>
+                To the right shows all of the schools already on the scheme, with many more to follow suit soon. Each red pin
+                is a location that can be selected for the name and address of the School    <br><br>
+            </p>
+            <div class="col-md-6" align="centre">
+                <img class="featurette-image img-responsive center-block img-circle" src="../Images/aboutUs/codestarter.jpg" alt="Generic placeholder image">
+                <p class="lead">Young student learning code</p>
+            </div>
+            <div class="col-md-6" align="centre">
+                <img class="featurette-image img-responsive center-block img-circle" src="../Images/aboutUs/learningcode.jpg" alt="Generic placeholder image">
+                <p class="lead">Girls learning code</p>
+            </div>
+        </div>
 
-    </p>
-</div>
+        <!--Creating the container for the google map--->
+        <!--Creating the iFrame for the google map--->
+        <div class="col-md-4">
+            <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+            <script type="text/javascript">
+                var markers = [
+                    {
+                        "title": 'Uxbridge High School',
+                        "lat": '51.537268',
+                        "lng": '-0.474085',
+                        "description": 'Uxbridge High School.'
+                    },
+                    {
+                        "title": 'Bishopshalt School',
+                        "lat": '51.533117',
+                        "lng": '-0.459791',
+                        "description": 'Bishopshalt School'
+                    },
+                    {
+                        "title": 'Barnhill School',
+                        "lat": '51.530936',
+                        "lng": '-0.398441',
+                        "description": 'Barnhill School'
+                    },
+                    {
+                        "title": 'Swakleys and Abbotsfield',
+                        "lat": '51.537323',
+                        "lng": '-0.444169',
+                        "description": 'Swakleys and Abbotsfield.'
+                    }
+                ];
+                window.onload = function () {
+                    LoadMap();
+                }
+                function LoadMap() {
+                    var mapOptions = {
+                        center: new google.maps.LatLng(markers[0].lat, markers[0].lng),
+                        zoom: 10,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+                    var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
 
-<!--Creating the container for the google map--->
-<!--Creating the iFrame for the google map--->
-<div align="left">
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript">
-        var markers = [
-            {
-                "title": 'Uxbridge High School',
-                "lat": '51.537268',
-                "lng": '-0.474085',
-                "description": 'Uxbridge High School.'
-            },
-            {
-                "title": 'Bishopshalt School',
-                "lat": '51.533117',
-                "lng": '-0.459791',
-                "description": 'Bishopshalt School'
-            },
-            {
-                "title": 'Barnhill School',
-                "lat": '51.530936',
-                "lng": '-0.398441',
-                "description": 'Barnhill School'
-            },
-            {
-                "title": 'Swakleys and Abbotsfield',
-                "lat": '51.537323',
-                "lng": '-0.444169',
-                "description": 'Swakleys and Abbotsfield.'
-            }
-        ];
-        window.onload = function () {
-            LoadMap();
-        }
-        function LoadMap() {
-            var mapOptions = {
-                center: new google.maps.LatLng(markers[0].lat, markers[0].lng),
-                zoom: 10,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+                    //Create and open InfoWindow.
+                    var infoWindow = new google.maps.InfoWindow();
 
-            //Create and open InfoWindow.
-            var infoWindow = new google.maps.InfoWindow();
+                    for (var i = 0; i < markers.length; i++) {
+                        var data = markers[i];
+                        var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+                        var marker = new google.maps.Marker({
+                            position: myLatlng,
+                            map: map,
+                            title: data.title
+                        });
 
-            for (var i = 0; i < markers.length; i++) {
-                var data = markers[i];
-                var myLatlng = new google.maps.LatLng(data.lat, data.lng);
-                var marker = new google.maps.Marker({
-                    position: myLatlng,
-                    map: map,
-                    title: data.title
-                });
+                        //Attach click event to the marker.
+                        (function (marker, data) {
+                            google.maps.event.addListener(marker, "click", function (e) {
+                                //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                                infoWindow.setContent("<div style = 'width:200px;min-height:40px'>" + data.description + "</div>");
+                                infoWindow.open(map, marker);
+                            });
+                        })(marker, data);
+                    }
+                }
+            </script>
+            <div id="dvMap" style="width: 600px; height: 600px">
+            </div>
+        </div>
+        <div class="col-md-2"></div>
 
-                //Attach click event to the marker.
-                (function (marker, data) {
-                    google.maps.event.addListener(marker, "click", function (e) {
-                        //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
-                        infoWindow.setContent("<div style = 'width:200px;min-height:40px'>" + data.description + "</div>");
-                        infoWindow.open(map, marker);
-                    });
-                })(marker, data);
-            }
-        }
-    </script>
-    <div id="dvMap" style="width: 600px; height: 600px">
     </div>
 </div>
 
@@ -182,14 +188,10 @@
 
 <!-- FOOTER -->
 <!-- Spaces to devide the footer from the page contents -->
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
 
 <div class="container marketing">
-
 
     <!-- FOOTER -->
     <footer>
