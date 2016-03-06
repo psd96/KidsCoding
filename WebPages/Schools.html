@@ -9,6 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href=../CSS/base.css">
 
 
     <title>Schools</title>
@@ -43,28 +44,38 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#" class="nav navbar-nav brand navbar-left"><img src="../Images/Icon/logo-icon-full-colour.png"></a>
-                    <a class="navbar-brand" href="#">KidsCoding</a>
+                    <a href="HomePage.html" class="nav navbar-nav brand navbar-left"><img src="../Images/Icon/logo-icon-full-colour.png"></a>
+                    <a class="navbar-brand" href="HomePage.html">KidsCoding</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li class="active"><a href="HomePage.html">Home</a></li>
                     <li class="about us">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+                        <a href="AboutUs.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
+                            <li><a href="AboutUs.html#c1">About us Top</a></li>
+                            <li><a href="AboutUs.html#c2">About us Bottom</a></li>
+                            <li><a href="ContactUs.html">Contact Us</a></li>
                         </ul>
-                    <li><a href="#donations">Donations</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    </li>
+                    <li class="parentSchools">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parents and Students <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="AboutUs.html#c1">Parent Information</a></li>
+                            <li><a href="AboutUs.html#c2">Student Information</a></li>
+                        </ul>
+                    </li>
+                    <li class="join us">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Join us <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="SignUp.html">Sign up</a></li>
+                            <li><a href="Donations.html">Donate</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Schools.html">Schools</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="SignUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
         </nav>
@@ -72,107 +83,115 @@
 </div>
 <!----HERE IS WHERE PAGE CONTENT GOES------>
 
-<div class="container">
+
 <!--main title under the navBar--->
 <center><H1><b>Schools</b></H1></center>
-<div class="col-md-6">
-    <h2 class="featurette-heading"><left>About the Schools</left></span></h2>
-    <p class="lead"><br><br>
-        Kids coding is one of the leading innovators in teaching children coding. <br><br>
-        Teaching is done in Schools local to Volunteers that have signed up to the program. <br><br>
-        Schools are vital to the program to provide resources such as computers, desks and chairs to students <br>
-        whilst also providing a comfortable enviroment to learn and excel in.<br><br>
-        To the right shows all of the schools already on the scheme, with many more to follow suit soon. <br><br>Each red pin
-        is a location that can be selected for the name and address of the School    <br><br>
-    </p>
-</div>
-<!--Creating the container for the google map--->
-<!--Creating the iFrame for the google map--->
-<div align="left">
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript">
-        var markers = [
-            {
-                "title": 'Aksa Beach',
-                "lat": '19.1759668',
-                "lng": '72.79504659999998',
-                "description": 'Aksa Beach is a popular beach and a vacation spot in Aksa village at Malad, Mumbai.'
-            },
-            {
-                "title": 'Juhu Beach',
-                "lat": '19.0883595',
-                "lng": '72.82652380000002',
-                "description": 'Juhu Beach is one of favourite tourist attractions situated in Mumbai.'
-            },
-            {
-                "title": 'Girgaum Beach',
-                "lat": '18.9542149',
-                "lng": '72.81203529999993',
-                "description": 'Girgaum Beach commonly known as just Chaupati is one of the most famous public beaches in Mumbai.'
-            },
-            {
-                "title": 'Jijamata Udyan',
-                "lat": '18.979006',
-                "lng": '72.83388300000001',
-                "description": 'Jijamata Udyan is situated near Byculla station is famous as Mumbai (Bombay) Zoo.'
-            },
-            {
-                "title": 'Sanjay Gandhi National Park',
-                "lat": '19.2147067',
-                "lng": '72.91062020000004',
-                "description": 'Sanjay Gandhi National Park is a large protected area in the northern part of Mumbai city.'
-            }
-        ];
-        window.onload = function () {
-            LoadMap();
-        }
-        function LoadMap() {
-            var mapOptions = {
-                center: new google.maps.LatLng(markers[0].lat, markers[0].lng),
-                zoom: 10,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+<div class = "contents">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <h2 class="featurette-heading"><center><b>About  the Schools</b></center></span></h2>
+            <p class="lead"><br>
+                Kids coding is one of the leading innovators in teaching children coding. <br><br>
+                Teaching is done in Schools local to Volunteers that have signed up to the program. <br><br>
+                Schools are vital to the program to provide resources such as computers, desks and chairs to students
+                whilst also providing a comfortable enviroment to learn and excel in.<br><br>
+                Not only will the classes help the students, but also the teachers to create better lessons where students can literally
+                make their ideas turn into a reality with the touch of a button. <br><br>
+                To the right shows all of the schools already on the scheme, with many more to follow suit soon. Each red pin
+                is a location that can be selected for the name and address of the School    <br><br>
+            </p>
+            <div class="col-md-6" align="centre">
+                <img class="featurette-image img-responsive center-block img-circle" src="../Images/aboutUs/codestarter.jpg" alt="Generic placeholder image">
+                <p class="lead">Young student learning code</p>
+            </div>
+            <div class="col-md-6" align="centre">
+                <img class="featurette-image img-responsive center-block img-circle" src="../Images/aboutUs/learningcode.jpg" alt="Generic placeholder image">
+                <p class="lead">Girls learning code</p>
+            </div>
+        </div>
 
-            //Create and open InfoWindow.
-            var infoWindow = new google.maps.InfoWindow();
+        <!--Creating the container for the google map--->
+        <!--Creating the iFrame for the google map--->
+        <div class="col-md-4">
+            <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+            <script type="text/javascript">
+                var markers = [
+                    {
+                        "title": 'Uxbridge High School',
+                        "lat": '51.537268',
+                        "lng": '-0.474085',
+                        "description": 'Uxbridge High School.'
+                    },
+                    {
+                        "title": 'Bishopshalt School',
+                        "lat": '51.533117',
+                        "lng": '-0.459791',
+                        "description": 'Bishopshalt School'
+                    },
+                    {
+                        "title": 'Barnhill School',
+                        "lat": '51.530936',
+                        "lng": '-0.398441',
+                        "description": 'Barnhill School'
+                    },
+                    {
+                        "title": 'Swakleys and Abbotsfield',
+                        "lat": '51.537323',
+                        "lng": '-0.444169',
+                        "description": 'Swakleys and Abbotsfield.'
+                    }
+                ];
+                window.onload = function () {
+                    LoadMap();
+                }
+                function LoadMap() {
+                    var mapOptions = {
+                        center: new google.maps.LatLng(markers[0].lat, markers[0].lng),
+                        zoom: 10,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+                    var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
 
-            for (var i = 0; i < markers.length; i++) {
-                var data = markers[i];
-                var myLatlng = new google.maps.LatLng(data.lat, data.lng);
-                var marker = new google.maps.Marker({
-                    position: myLatlng,
-                    map: map,
-                    title: data.title
-                });
+                    //Create and open InfoWindow.
+                    var infoWindow = new google.maps.InfoWindow();
 
-                //Attach click event to the marker.
-                (function (marker, data) {
-                    google.maps.event.addListener(marker, "click", function (e) {
-                        //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
-                        infoWindow.setContent("<div style = 'width:200px;min-height:40px'>" + data.description + "</div>");
-                        infoWindow.open(map, marker);
-                    });
-                })(marker, data);
-            }
-        }
-    </script>
-    <div id="dvMap" style="width: 400px; height: 600px">
+                    for (var i = 0; i < markers.length; i++) {
+                        var data = markers[i];
+                        var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+                        var marker = new google.maps.Marker({
+                            position: myLatlng,
+                            map: map,
+                            title: data.title
+                        });
+
+                        //Attach click event to the marker.
+                        (function (marker, data) {
+                            google.maps.event.addListener(marker, "click", function (e) {
+                                //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                                infoWindow.setContent("<div style = 'width:200px;min-height:40px'>" + data.description + "</div>");
+                                infoWindow.open(map, marker);
+                            });
+                        })(marker, data);
+                    }
+                }
+            </script>
+            <div id="dvMap" style="width: 600px; height: 600px">
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+
     </div>
 </div>
-</div>
+
 <!----HERE IS WHERE PAGE CONTENT GOES------>
 
 <!-- FOOTER -->
 <!-- Spaces to devide the footer from the page contents -->
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
 
 <div class="container marketing">
-
 
     <!-- FOOTER -->
     <footer>
