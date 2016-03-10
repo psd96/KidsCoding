@@ -7,6 +7,9 @@ body {
     color: #5a5a5a;
     background-color: lightblue;
 }
+p{
+    color:white;
+}
 
 
 .navbar-wrapper .brand > img{
