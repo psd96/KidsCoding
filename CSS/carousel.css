@@ -60,7 +60,7 @@ body {
 /* Declare heights because of positioning of img element */
 .carousel .item {
     height: 500px;
-    background-color: #1b6d85;
+    background-color: #65bfcc;
 }
 .carousel-inner > .item > img {
     top: 0;
